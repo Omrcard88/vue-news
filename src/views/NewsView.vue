@@ -1,7 +1,7 @@
 <template>
     <div>
         
-        <p v-for="item in this.$store.state.news">
+        <p v-for="item in newsItems">
             <a v-bind:href="item.url">
                 {{ item.title}}
             </a>
@@ -10,9 +10,14 @@
     </div>
 </template>
 <script>
-
+import {mapGetters} from 'vuex';
 
 export default{
+    computed:{
+        ...mapGetters({
+            newsItems: 'fetchedNews'
+        })
+    },
     data(){
         return{
     
