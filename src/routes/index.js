@@ -6,6 +6,7 @@ import AskView from '../views/AskView.vue';
 import UserView from '../views/UserView.vue';
 import ItemView from '../views/ItemView.vue';
 
+
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
@@ -17,14 +18,17 @@ export const router = new VueRouter({
         },
         {
             path:'/news',
+            name:'news',
             component:NewsView,
         },
         {
             path:'/ask',
+            name:'ask',
             component:AskView,
         },
         {
             path:'/jobs',
+            name:'jobs',
             component:JobsView,
         },
         {
@@ -33,6 +37,14 @@ export const router = new VueRouter({
         },
         {
             path:'/item',
+            component:ItemView,
+        },
+        {
+            path:'/user/:id',
+            component:UserView,
+        },
+        {
+            path:'/item/:id',
             component:ItemView,
         }
     ]
