@@ -5,6 +5,7 @@ import JobsView from '../views/JobsView.vue';
 import AskView from '../views/AskView.vue';
 import UserView from '../views/UserView.vue';
 import ItemView from '../views/ItemView.vue';
+import MyView from '../views/MyView.vue';
 
 
 Vue.use(VueRouter);
@@ -31,21 +32,27 @@ export const router = new VueRouter({
             name:'jobs',
             component:JobsView,
         },
-        {
-            path:'/user',
-            component:UserView,
-        },
-        {
-            path:'/item',
-            component:ItemView,
-        },
+        // {
+        //     path:'/user',
+        //     component:UserView,
+        // },
+        // {
+        //     path:'/item',
+        //     component:ItemView,
+        // },
         {
             path:'/user/:id',
+            name:'user',
             component:UserView,
         },
         {
             path:'/item/:id',
             component:ItemView,
+        },
+        {
+            path:'/my',
+            name:'my',
+            component:MyView,
         }
     ]
 });

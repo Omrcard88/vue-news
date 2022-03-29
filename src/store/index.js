@@ -13,6 +13,7 @@ export const store = new Vuex.Store({
         jobs:[],
         user:{},
         item:[],
+        // myInfo:{'id': '진태우', 'karma' : '999', 'created': '2022.03.30' },
     },
     getters:{
         fetchedAsk(state){

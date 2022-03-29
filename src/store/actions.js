@@ -48,5 +48,8 @@ export default{
             .catch( error => {
                 console.log(error);
             });
+    },
+    FETCH_MYINFO({commit},myInfo){
+        commit('SET_USER',myInfo);
     }
 }

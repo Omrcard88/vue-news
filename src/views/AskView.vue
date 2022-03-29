@@ -28,7 +28,7 @@
 
 <script>
 import ListItem from '../components/ListItem.vue';
-import {mapState, mapGetters} from 'vuex';
+// import {mapState, mapGetters} from 'vuex';
 
 
 export default{
@@ -37,7 +37,7 @@ export default{
         // ...mapGetters([
         //     'fetchedAsk'
         // ]),
-        ListItem
+     
         
     },
     data(){
@@ -46,7 +46,7 @@ export default{
         }
     },
     created(){
-        this.$store.dispatch('FETCH_ASK');
+        // this.$store.dispatch('FETCH_ASK');
         // var vm = this;
 
         // fetchAskList()
